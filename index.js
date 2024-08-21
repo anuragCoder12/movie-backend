@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json()) // To suppourt json encoded bodies
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
-    app.listen(process.env.PORT || 5000, () => console.log("db connected and port running",process.env.PORT))
+    app.listen( 5000, () => console.log("db connected and port running",process.env.PORT))
 }).catch((err) => {
     console.log(err)
 })
