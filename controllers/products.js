@@ -23,7 +23,7 @@ const slugify = require('slugify')
 //geting all products 
 const getAllProducts = async(req, res) => {
     try {
-        const { name, page = 1, limit = 1 } = req.query
+        const { name, page = 1, limit = 10 } = req.query
         let query = {}
        if(name){
         query.name = { $regex: name, $options: "i" }
